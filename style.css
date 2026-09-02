@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f5f7fa;
+}
+
+/* Navigation */
+nav {
+    background-color: #222;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    font-size: 26px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Home */
+#home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 50px 20px;
+}
+
+#home h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #00bcd4;
+}
+
+/* Sections */
+section {
+    min-height: 70vh;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+}
+
+/* About */
+#about {
+    background-color: white;
+}
+
+/* Skills */
+#skills {
+    background-color: #f1f8e9;
+}
+
+/* Projects */
+#projects {
+    background-color: #fff3e0;
+}
+
+/* Contact */
+#contact {
+    background-color: #fce4ec;
+}
+skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.skill-card {
+    background-color: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.skill-card h2 {
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 16px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card h2 {
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+<section id="contact">
+    <h1>Contact Me</h1>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <h2>Get In Touch</h2>
+
+            <p>Email: jefry@example.com</p>
+            <p>I would be happy to hear from you.</p>
+
+            <button onclick="showMessage()">Send Message</button>
+        </div>
+
+    </div>
+</section>
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav a {
+        margin-left: 8px;
+        font-size: 14px;
+    }
+
+    #home h1 {
+        font-size: 35px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .skill-card,
+    .project-card,
+    .contact-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+#home {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home-content {
+    max-width: 700px;
+}
+
+.welcome {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.home-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.home-content > p:not(.welcome) {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.home-buttons {
+    margin-top: 30px;
+}
+
+.home-buttons button {
+    padding: 12px 25px;
+    margin: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.home-buttons button:hover {
+    transform: translateY(-3px);
+}
+#about {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 750px;
+}
+
+.about-card {
+    background-color: white;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-card h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about-card h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+#skills {
+    min-height: 80vh;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+#skills .section-title {
+    margin-bottom: 10px;
+}
+
+#skills > h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.skill-card {
+    background-color: white;
+    width: 280px;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+#projects {
+    min-height: 80vh;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+#projects .section-title {
+    margin-bottom: 10px;
+}
+
+#projects > h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background-color: white;
+    width: 280px;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.project-card button:hover {
+    transform: translateY(-2px);
+}
+#contact {
+    min-height: 80vh;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+#contact .section-title {
+    margin-bottom: 10px;
+}
+
+#contact > h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    background-color: white;
+    width: 450px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.contact-card label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-card textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-card button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-card button:hover {
+    transform: translateY(-2px);
+}
